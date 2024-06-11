@@ -1,7 +1,9 @@
 import {useState, useReducer} from 'react';
 
 function reducer(state, action) {
-  return state + action;
+  if (action.type === 'inc') return state + action.payload;
+  if (action.type === 'dec') return state - action.payload;
+  if (action.type === 'setCount') return action.payload;
 }
 
 function DateCounter() {
