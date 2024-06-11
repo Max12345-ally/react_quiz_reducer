@@ -16,13 +16,13 @@ function DateCounter() {
   date.setDate(date.getDate() + count);
 
   const dec = function () {
-    dispatch(-1);
+    dispatch({type: 'dec', payload: -1});
     // setCount((count) => count - 1);
     // setCount((count) => count - step);
   };
 
   const inc = function () {
-    dispatch(1);
+    dispatch({type: 'inc', payload: 1});
     // setCount((count) => count + 1);
     // setCount((count) => count + step);
   };
