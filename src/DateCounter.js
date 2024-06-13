@@ -30,6 +30,7 @@ function DateCounter() {
   };
 
   const defineCount = function (e) {
+    dispatch({type: 'setCount', payload: Number(e.target.value)});
     // setCount(Number(e.target.value));
   };
 
