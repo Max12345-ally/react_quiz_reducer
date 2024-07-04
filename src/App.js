@@ -2,6 +2,11 @@ import Header from './Header';
 import Main from './Main';
 import {useEffect, useReducer} from 'react';
 
+const initialState = {
+  questions: [],
+  status: 'loading',
+};
+
 export default function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
