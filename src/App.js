@@ -7,6 +7,12 @@ const initialState = {
   status: 'loading',
 };
 
+function reducer(state, action) {
+  switch (action.type) {
+    case 'dataReceived':
+  }
+}
+
 export default function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
