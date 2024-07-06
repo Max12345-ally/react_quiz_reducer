@@ -26,7 +26,7 @@ function reducer(state, action) {
 }
 
 export default function App() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [{question, status}, dispatch] = useReducer(reducer, initialState);
 
   useEffect(function () {
     fetch('http://localhost:8000/questions')
@@ -38,10 +38,7 @@ export default function App() {
   return (
     <div className='app'>
       <Header />
-      <Main>
-        <p>1/15</p>
-        <p>Questions?</p>
-      </Main>
+      <Main>{status === 'Loading' && <Loading />}</Main>
     </div>
   );
 }
