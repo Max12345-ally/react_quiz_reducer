@@ -1,6 +1,7 @@
 import Header from './Header';
 import Main from './Main';
 import Loader from './Loader';
+import Error from './Error';
 import {useEffect, useReducer} from 'react';
 
 const initialState = {
