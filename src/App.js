@@ -1,5 +1,6 @@
 import Header from './Header';
 import Main from './Main';
+import Loader from './Loader';
 import {useEffect, useReducer} from 'react';
 
 const initialState = {
@@ -38,7 +39,7 @@ export default function App() {
   return (
     <div className='app'>
       <Header />
-      <Main>{status === 'Loading' && <Loading />}</Main>
+      <Main>{status === 'Loading' && <Loader />}</Main>
     </div>
   );
 }
