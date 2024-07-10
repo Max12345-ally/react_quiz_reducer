@@ -1,8 +1,9 @@
-import Header from './Header';
-import Main from './Main';
-import Loader from './Loader';
-import Error from './Error';
 import {useEffect, useReducer} from 'react';
+import Error from './Error';
+import Header from './Header';
+import Loader from './Loader';
+import Main from './Main';
+import StartScreen from './StartScreen';
 
 const initialState = {
   questions: [],
@@ -40,7 +41,11 @@ export default function App() {
   return (
     <div className='app'>
       <Header />
-      <Main>{status === 'Loading' && <Loader />}</Main>
+      <Main>
+        {status === 'Loading' && <Loader />}
+        {status === 'error' && <Error />}
+        {status === 'ready' && <StartScreen />}
+      </Main>
     </div>
   );
 }
