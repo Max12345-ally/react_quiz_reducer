@@ -3,6 +3,7 @@ import Error from './Error';
 import Header from './Header';
 import Loader from './Loader';
 import Main from './Main';
+import Question from './Question';
 import StartScreen from './StartScreen';
 
 const initialState = {
@@ -47,6 +48,7 @@ export default function App() {
         {status === 'Loading' && <Loader />}
         {status === 'error' && <Error />}
         {status === 'ready' && <StartScreen numQuestions={numQuestions} />}
+        {status === 'active' && <Question />}
       </Main>
     </div>
   );
